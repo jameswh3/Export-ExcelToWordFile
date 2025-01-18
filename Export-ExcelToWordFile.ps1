@@ -54,4 +54,3 @@ function Export-ExcelToWordFile {
         Write-Host "Export complete"
     }
 }
-
