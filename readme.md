@@ -16,9 +16,18 @@ To use the script, run the `Export-ExcelToWordFile` function with the following 
 * `-ExcelFilePath`: The path to the Excel file.
 * `-OutputDirectory`: The directory where the Word documents will be saved.
 * `-TitleColumn`: The column in the Excel file that will be used as the title for each Word document.
+* `-OverwriteExistingFile`: A switch parameter to overwrite existing files with the same name.
 
-Example:
+Example with `-OverwriteExistingFile` switch:
+```ps1
+Export-ExcelToWordFile -ExcelFilePath "C:\path\to\your\file.xlsx" `
+    -OutputDirectory "C:\path\to\output\directory" `
+    -TitleColumn "TitleColumnName" `
+    -OverwriteExistingFile
+```
+Example without `-OverwriteExistingFile` switch:
 ```ps1
 Export-ExcelToWordFile -ExcelFilePath "C:\path\to\your\file.xlsx" `
     -OutputDirectory "C:\path\to\output\directory" `
     -TitleColumn "TitleColumnName"
+```
